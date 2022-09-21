@@ -27,13 +27,22 @@ public class PrintDuplicates2 {
 		for (int i = 0; i < size; i++)
 			System.out.print(numbers[i] + " ");
 		
-		int temp = 0;
+		int temp = 0, count = 0;
 		boolean isDuplicate = false;
+		temp = numbers[0];
+		System.out.println("\nDuplicate elements: ");
 		for (int i = 0; i < size - 1; i++) {
-			temp = numbers[i]; 
-//			if (temp == numbers[i + 1])
-//					
-//			else
+			
+			if (temp == numbers[i + 1]) {
+				count++;
+				continue;	
+			}
+			else {
+				if (count >= 1)
+					System.out.print(temp + " ");
+				temp = numbers[i + 1];
+				count = 0;
+			}
 					
 				
 		}
